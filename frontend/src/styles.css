@@ -1,0 +1,152 @@
+/* Page */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f2f9;
+  color: #30293d;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.instructions {
+  margin-bottom: 24px;
+  color: #70657e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.calculator {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e3dbea;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px #30293d0d;
+}
+
+.display {
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: #f0eaf8;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.expression {
+  margin: 0 0 10px;
+  color: #70657e;
+  font-size: 14px;
+}
+
+output {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.error {
+  color: #a12d43;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.extra-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  min-width: 0;
+  min-height: 54px;
+  border: 1px solid #e8e1ee;
+  border-radius: 10px;
+  background: #faf8fc;
+  color: #30293d;
+  font: inherit;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.utility,
+.extra-buttons button {
+  background: #f0eaf8;
+  color: #65428e;
+}
+
+.operator {
+  background: #e7d9f7;
+  color: #65428e;
+}
+
+.equals {
+  background: #7546bd;
+  color: white;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+button:focus-visible,
+button[aria-pressed='true'] {
+  outline: 2px solid #7546bd;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.status {
+  min-height: 30px;
+  margin: 16px 0 0;
+  color: #70657e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Small screens */
+@media (max-width: 400px) {
+  main {
+    margin-top: 24px;
+  }
+
+  .calculator {
+    padding: 14px;
+  }
+}

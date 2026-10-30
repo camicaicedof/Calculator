@@ -1,0 +1,11 @@
+.git
+.tools
+**/node_modules
+**/coverage
+frontend/dist
+coverage
+*.exe
+**/.venv
+**/__pycache__
+**/.coverage
+**/htmlcov

@@ -1,0 +1,11 @@
+services:
+  calculator:
+    build: .
+    ports:
+      - "127.0.0.1:${PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/api/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
